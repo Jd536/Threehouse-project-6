@@ -94,7 +94,10 @@ button {
 
 .show {
   color: #000;
-  background-color: #76CE82;
+  background-image: radial-gradient(circle, #f6fbfb, #caf2ec, #a2e8d2, #84dcae, #76ce82);
+  box-shadow: 2px 3px 19px -6px rgba(0,0,0,0.75);
+  transition: all;
+  transition-duration: .5s;
 }
 
 /* Keyboard */
@@ -160,4 +163,8 @@ button {
 
 .lose a {
   color: var(--color-lose);
+
+}
+a{
+  text-decoration: none;
 }
