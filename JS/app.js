@@ -44,14 +44,19 @@ function addPhraseToDisplay(arr){
 arr.forEach(function(e){
 
     let li= document.createElement("li");
+
     li.textContent=e;
-  if(e===" "){
-      li.className = " ";
-    }else{
-      li.className = "letter";
-    }
-    ul.appendChild(li);
-});
+
+    console.log(li);
+    console.log()
+    if(e===" "){
+        li.className = "space";
+      }else{
+        li.className = "letter";
+      }
+      ul.appendChild(li);
+  });
+
 }
 
 addPhraseToDisplay(phraseArray);
@@ -66,7 +71,7 @@ arr.forEach(function(e){
     let li= document.createElement("li");
     li.textContent=e;
   if(e===" "){
-      li.className = " ";
+      li.className = "space";
     }else{
       li.className = "letter";
     }
@@ -119,6 +124,7 @@ if (e.target.tagName== "BUTTON"){
     const heartimage= hearts[missed-1].querySelectorAll("img")[0];
     heartimage.src="images/lostHeart.png";
   }
+  button.disabled=true;
 }
 checkWin();
 });
@@ -134,7 +140,7 @@ showCount = showCount.length;
   overlay.className="win";
       title.textContent="Awesome!! -- You won!!"
   reset();
-} 
+}
     if(missed>= 5) {
   overlay.style.display ="";
   overlay.className="lose";
